@@ -1,0 +1,99 @@
+1.What is Database? Explain with an example on why we should we need database?
+
+=> A database is an organized collection of structured information, or data stored  in a computer system. 
+
+    >> Example Scenario: Online Retail Store
+       Considering an online retail store like Amazon. The store needs to manage a vast amount of data, including:
+
+        i. Customer Information: Names, addresses, contact details, payment information.
+        ii. Product Information: Product IDs, names, descriptions, prices, stock levels.
+        iii. Order Information: Order IDs, customer details, order items, quantities, order dates, shipping details.
+
+    1.Efficient Data Management: Organizes customer, product, and order details efficiently.
+    2.Quick Access to Data: Fast retrieval of product info for customer searches.
+    3.Data Integrity and Consistency: Ensures accurate, up-to-date stock and order information.
+    4.Scalability: Handles increasing data volume as the store grows.
+    5.Security: Protects sensitive data and restricts access to authorized users.
+
+    Using database will help us to achieve all the above mentioned features.
+
+
+2.Write a short note on file based storage system.Explain the major challenges of File based Storage system.
+
+=>A file-based storage system is a method of storing and managing data where information is saved in files on a computer or network. Each file can contain various types of data, such as text, images, or videos, and is organized into directories or folders.
+
+    >>The major challenges of file-based storage systems are data redundancy and inconsistency due to lack of centralized control, and difficulty in concurrent access and managing large datasets efficiently.
+
+3.What is  DBMS ? What was the need for DBMS?
+
+=>A Database Management System (DBMS) is software that enables the creation, management, and manipulation of databases. It provides a systematic way to store, retrieve, and manage data, ensuring data integrity and security. 
+
+    >>The need for a DBMS arose to address issues like data redundancy, inconsistency, and inefficiency in file-based systems. It supports concurrent data access by multiple users, offers robust data recovery, and enforces data integrity constraints.
+
+4.Explain 5 challenges of file based storage system that was resolved by DBMS.
+
+=> 1.Data Redundancy and Inconsistency:
+
+    Challenge: Duplicate data stored in multiple files leads to inconsistencies and unnecessary storage use.
+    Resolution by DBMS: Centralized data management eliminates redundancy and ensures consistency.
+
+    2.Data Access and Retrieval:
+
+    Challenge: Slow and inefficient data retrieval due to sequential access in file systems.
+    Resolution by DBMS: Efficient indexing and query processing enable fast and flexible data access.
+
+    3.Data Integrity:
+
+    Challenge: Ensuring data accuracy and consistency across files is difficult.
+    Resolution by DBMS: Enforces integrity constraints, such as primary keys and foreign keys, maintaining data accuracy.
+
+    4.Concurrent Access:
+
+    Challenge: Multiple users accessing and modifying files simultaneously can cause conflicts and data corruption.
+    Resolution by DBMS: Manages concurrent access with transaction control and locking mechanisms, ensuring data integrity.
+
+    5.Security and Access Control:
+
+    Challenge: Implementing fine-grained security controls in a file-based system is complex.
+    Resolution by DBMS: Provides robust security features, including user authentication, authorization, and access control at various levels.
+
+5.List out different types of classification in DBMS.
+
+=> i. SQL: {
+    Relational-DBMS : MySQL,Oracle, SQL Server
+}
+ ii. NoSQL: {
+    Key-value storage: Redis,
+    Document-oriented Database: MongoDB,
+    Graph Databases: Neo4J,
+    Wide-column stores: Apache Cassandra, Google Bigtable, ScyllaDB,
+ }
+
+6. What is the significance of Data modelling and explain different types of data modelling.
+
+=> Data modeling is crucial as it provides a blueprint for organizing and structuring data within a database system. It helps define relationships between data entities, attributes, and constraints, ensuring data accuracy and consistency. By creating a clear data model, organizations can improve decision-making processes, enhance data quality, facilitate system integration, and optimize database performance. Overall, data modeling ensures that data is effectively organized, accessible, and understandable for users and applications.
+
+    >>Types of Data Modeling:
+
+    Conceptual Data Modeling: Focuses on high-level concepts and relationships between data entities, often represented using Entity-Relationship (ER) diagrams.
+
+    Logical Data Modeling: Translates conceptual models into a detailed structure using specific data models like relational, hierarchical, or object-oriented, often involving normalization.
+
+    Physical Data Modeling: Involves implementing logical models into physical database structures, specifying tables, columns, indexes, and constraints for efficient storage and retrieval.
+
+    Dimensional Data Modeling: Specializes in data warehouses and OLAP systems, emphasizing dimensions (categories by which data is analyzed) and measures (data values).
+
+    Hierarchical Data Modeling: Structures data in a tree-like format with parent-child relationships, common in hierarchical databases.
+
+
+7. Explain three Schema architecture with its advantage.
+
+=> The three-schema architecture is a design approach for databases that splits data views into three layers: what users see, the logical structure, and how data is stored. This separation offers flexibility, data independence, and simpler data management. The method emerged in the 1970s to make handling complex databases easier.
+
+    >> i. Data independence. When the logical and physical views are separate, changes to one view (especially physical) don't require changes to the other. For instance, changing the storage structure doesn't affect what users see.
+
+    ii. Flexibility. Users can see different views tailored to their needs, making the system more user-friendly and adaptable.
+
+    iii. Efficient data access. The separation allows for tailored optimizations. For example, while a DBA may optimize storage in the internal schema, developers can design efficient queries based on the logical schema.
+
+    iv. Improved security. Providing customized external views to users ensures that they access only the data they are authorized to see.
